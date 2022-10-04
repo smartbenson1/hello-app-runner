@@ -19,4 +19,4 @@ RUN yum update -y \
 
 RUN pip3 install -r requirements.txt
 
-CMD ["python", "./server.py"]
+CMD ["python", "./app.py"]
