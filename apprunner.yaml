@@ -12,7 +12,7 @@ build:
     - name: DATABASE_PORT
       value: 3306
     - name: DATABASE_USER
-      value: 'booker'
+      value: 'bookuser'
 run:
   command: python app.py
   network:
