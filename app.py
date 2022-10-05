@@ -9,10 +9,10 @@ import os
 
 DATABASE_REGION = 'ap-northeast-1'
 DATABASE_CERT = 'cert/ap-northeast-1-bundle.pem'
-DATABASE_HOST = os.getenv(DATABASE_HOST)
-DATABASE_PORT = os.getenv(DATABASE_PORT)
-DATABASE_USER = os.getenv(DATABASE_USER)
-DATABASE_NAME = os.getenv(DATABASE_NAME)
+DATABASE_HOST = os.getenv('DATABASE_HOST')
+DATABASE_PORT = os.getenv('DATABASE_PORT')
+DATABASE_USER = os.getenv('DATABASE_USER')
+DATABASE_NAME = os.getenv('DATABASE_NAME')
 
 os.environ['LIBMYSQL_ENABLE_CLEARTEXT_PLUGIN'] = '1'
 
