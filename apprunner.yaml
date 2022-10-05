@@ -4,15 +4,15 @@ build:
   commands:
     build:
     - pip3 install -r requirements.txt
-  env:
-    - name: DATABASE_HOST
-      value: 'apprunner-dbinstance2.cpx2qezec79a.ap-northeast-1.rds.amazonaws.com'
-    - name: DATABASE_NAME
-      value: 'bookcase'
-    - name: DATABASE_PORT
-      value: 3306
-    - name: DATABASE_USER
-      value: 'bookuser'
+      env:
+        - name: DATABASE_HOST
+          value: 'apprunner-dbinstance2.cpx2qezec79a.ap-northeast-1.rds.amazonaws.com'
+        - name: DATABASE_NAME
+          value: 'bookcase'
+        - name: DATABASE_PORT
+          value: 3306
+        - name: DATABASE_USER
+          value: 'bookuser'
 run:
   command: python app.py
   network:
