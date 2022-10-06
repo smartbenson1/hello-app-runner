@@ -39,17 +39,20 @@ except Exception as e:
     print('Database connection failed due to {}'.format(e))          
 
 def all_books(request):
-    mycursor = mydb.cursor()
-    mycursor.execute('SELECT name, title, year FROM authors, books WHERE authors.authorId = books.authorId ORDER BY year')
-    title = 'Books'
-    message = '<html><head><title>' + title + '</title></head><body>'
-    message += '<h1>' + title + '</h1>'
-    message += '<ul>'
-    for (name, title, year) in mycursor:
-        message += '<li>' + name + ' - ' + title + ' (' + str(year) + ')</li>'
-    message += '</ul>'
-    message += '</body></html>'
-    return Response(message)
+    return Response('Hello World!')
+
+# def all_books(request):
+#     mycursor = mydb.cursor()
+#     mycursor.execute('SELECT name, title, year FROM authors, books WHERE authors.authorId = books.authorId ORDER BY year')
+#     title = 'Books'
+#     message = '<html><head><title>' + title + '</title></head><body>'
+#     message += '<h1>' + title + '</h1>'
+#     message += '<ul>'
+#     for (name, title, year) in mycursor:
+#         message += '<li>' + name + ' - ' + title + ' (' + str(year) + ')</li>'
+#     message += '</ul>'
+#     message += '</body></html>'
+#     return Response(message)
 
 if __name__ == '__main__':
 
