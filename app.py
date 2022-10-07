@@ -20,23 +20,24 @@ PORT = int(os.environ.get('PORT'))
 
 rds = boto3.client('rds')
 
-# try:
-#     token = rds.generate_db_auth_token(
-#         DBHostname=DATABASE_HOST,
-#         Port=DATABASE_PORT,
-#         DBUsername=DATABASE_USER,
-#         Region=DATABASE_REGION
-#     )
-#     mydb =  mysql.connector.connect(
-#         host=DATABASE_HOST,
-#         user=DATABASE_USER,
-#         passwd=token,
-#         port=DATABASE_PORT,
-#         database=DATABASE_NAME,
-#         ssl_ca=DATABASE_CERT
-#     )
-# except Exception as e:
-#     print('Database connection failed due to {}'.format(e))          
+try:
+    token = rds.generate_db_auth_token(
+        DBHostname=DATABASE_HOST,
+        Port=DATABASE_PORT,
+        DBUsername=DATABASE_USER,
+        Region=DATABASE_REGION
+    )
+    print(token)
+    # mydb =  mysql.connector.connect(
+    #     host=DATABASE_HOST,
+    #     user=DATABASE_USER,
+    #     passwd=token,
+    #     port=DATABASE_PORT,
+    #     database=DATABASE_NAME,
+    #     ssl_ca=DATABASE_CERT
+    # )
+except Exception as e:
+    print('Database connection failed due to {}'.format(e))          
 
 def all_books(request):
     return Response('Hello World!')
