@@ -1,20 +1,21 @@
 version: 1.0
 runtime: python3
 build:
+  env:
+    - name: DATABASE_HOST
+      value: 'apprunner-dbinstance2.cpx2qezec79a.ap-northeast-1.rds.amazonaws.com'
+    - name: DATABASE_NAME
+      value: 'bookcase'
+    - name: DATABASE_PORT
+      value: 3306
+    - name: DATABASE_USER
+      value: 'bookuser'
+    - name: PORT
+      value: 8080
   commands:
     build:
       - pip3 install -r requirements.txt
-  # env:
-  #   - name: DATABASE_HOST
-  #     value: 'apprunner-dbinstance2.cpx2qezec79a.ap-northeast-1.rds.amazonaws.com'
-  #   - name: DATABASE_NAME
-  #     value: 'bookcase'
-  #   - name: DATABASE_PORT
-  #     value: 3306
-  #   - name: DATABASE_USER
-  #     value: 'booker'
-  #   - name: PORT
-  #     value: 8080
+  
 run:
   command: python app.py
   network:
