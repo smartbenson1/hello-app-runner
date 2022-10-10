@@ -2,13 +2,13 @@ version: 1.0
 runtime: python3
 build:
   env:
-    - name: DATABASE_HOST
+    - name: DB_HOST
       value: 'apprunner-dbinstance2.cpx2qezec79a.ap-northeast-1.rds.amazonaws.com'
-    - name: DATABASE_NAME
+    - name: DB_NAME
       value: 'bookcase'
-    - name: DATABASE_PORT
+    - name: DB_PORT
       value: 3306
-    - name: DATABASE_USER
+    - name: DB_USER
       value: 'bookuser'
     - name: PORT
       value: 8080

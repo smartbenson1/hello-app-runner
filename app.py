@@ -9,10 +9,10 @@ import os
 
 DATABASE_REGION = 'ap-northeast-1'
 DATABASE_CERT = 'cert/ap-northeast-1-bundle.pem'
-DATABASE_HOST = os.environ['DATABASE_HOST']
-DATABASE_PORT = os.environ['DATABASE_PORT']
-DATABASE_USER = os.environ['DATABASE_USER']
-DATABASE_NAME = os.environ['DATABASE_NAME']
+DATABASE_HOST = os.environ['DB_HOST']
+DATABASE_PORT = os.environ['DB_PORT']
+DATABASE_USER = os.environ['DB_USER']
+DATABASE_NAME = os.environ['DB_NAME']
 PORT = os.environ['PORT']
 
 # DATABASE_HOST = 'apprunner-dbinstance2.cpx2qezec79a.ap-northeast-1.rds.amazonaws.com'
