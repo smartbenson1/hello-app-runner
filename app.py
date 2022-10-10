@@ -11,12 +11,6 @@ DATABASE_HOST = os.environ['DB_HOST']
 DATABASE_PORT = os.environ['DB_PORT']
 DATABASE_USER = os.environ['DB_USER']
 DATABASE_NAME = os.environ['DB_NAME']
-#PORT = os.environ['PORT']
-
-# DATABASE_HOST = 'apprunner-dbinstance2.cpx2qezec79a.ap-northeast-1.rds.amazonaws.com'
-#DATABASE_PORT = 3306
-#DATABASE_NAME = 'bookcase'
-#DATABASE_USER = 'bookuser'
 PORT = 8080
 
 os.environ['LIBMYSQL_ENABLE_CLEARTEXT_PLUGIN'] = '1'
