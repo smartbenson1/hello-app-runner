@@ -5,8 +5,6 @@ import os
 import boto3
 import mysql.connector
 
-import os
-
 DATABASE_REGION = 'ap-northeast-1'
 DATABASE_CERT = 'cert/ap-northeast-1-bundle.pem'
 DATABASE_HOST = os.environ['DB_HOST']

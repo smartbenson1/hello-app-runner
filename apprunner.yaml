@@ -1,6 +1,11 @@
 version: 1.0
 runtime: python3
 build:
+  commands:
+    build:
+      - pip3 install -r requirements.txt
+  
+run:
   env:
     - name: DB_HOST
       value: 'apprunner-dbinstance2.cpx2qezec79a.ap-northeast-1.rds.amazonaws.com'
@@ -12,12 +17,7 @@ build:
       value: 'bookuser'
     - name: PORT
       value: 8080
-  commands:
-    build:
-      - pip3 install -r requirements.txt
-  
-run:
-  command: python app.py
-  network:
+   command: python app.py
+   network:
     port: 8080
 
