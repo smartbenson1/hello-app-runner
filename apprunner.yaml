@@ -17,7 +17,7 @@ run:
       value: 'bookuser'
     - name: PORT
       value: 8080
-   command: python app.py
-   network:
-     port: 8080
+  command: python app.py
+  network:
+    port: 8080
 

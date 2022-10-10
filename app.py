@@ -42,9 +42,6 @@ try:
 except Exception as e:
     print('Database connection failed due to {}'.format(e))          
 
-# def all_books(request):
-#     return Response('Hello World!')
-
 def all_books(request):
     mycursor = mydb.cursor()
     mycursor.execute('SELECT name, title, year FROM authors, books WHERE authors.authorId = books.authorId ORDER BY year')
