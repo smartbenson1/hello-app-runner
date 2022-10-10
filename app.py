@@ -9,31 +9,19 @@ import os
 
 DATABASE_REGION = 'ap-northeast-1'
 DATABASE_CERT = 'cert/ap-northeast-1-bundle.pem'
-<<<<<<< HEAD
 DATABASE_HOST = os.environ['DATABASE_HOST']
 DATABASE_PORT = os.environ['DATABASE_PORT']
 DATABASE_USER = os.environ['DATABASE_USER']
 DATABASE_NAME = os.environ['DATABASE_NAME']
-# DATABASE_HOST = 'apprunner-dbinstance2.cpx2qezec79a.ap-northeast-1.rds.amazonaws.com'
-# DATABASE_PORT = 3306
-# DATABASE_NAME = 'bookcase'
-# DATABASE_USER = 'bookuser'
 PORT = os.environ['PORT']
-=======
-#DATABASE_HOST = os.environ['DATABASE_HOST']
-#DATABASE_PORT = os.environ['DATABASE_PORT']
-#DATABASE_USER = os.environ['DATABASE_USER']
-#DATABASE_NAME = os.environ['DATABASE_NAME']
-DATABASE_HOST = 'apprunner-dbinstance2.cpx2qezec79a.ap-northeast-1.rds.amazonaws.com'
-DATABASE_PORT = 3306
-DATABASE_NAME = 'bookcase'
-DATABASE_USER = 'bookuser'
-PORT = 8080
->>>>>>> 293e55c5cc892bcc06a16c12d8a08d725a584c4a
+
+# DATABASE_HOST = 'apprunner-dbinstance2.cpx2qezec79a.ap-northeast-1.rds.amazonaws.com'
+#DATABASE_PORT = 3306
+#DATABASE_NAME = 'bookcase'
+#DATABASE_USER = 'bookuser'
+#PORT = 8080
 
 os.environ['LIBMYSQL_ENABLE_CLEARTEXT_PLUGIN'] = '1'
-
-# PORT = os.environ.get('PORT')
 
 rds = boto3.client('rds', region_name=DATABASE_REGION)
 
